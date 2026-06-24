@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.example.demo.controller.DataController;
 
 @SpringBootTest
-public class DataControllerTest {
+class DataControllerTest {
     @Autowired
     DataController dataController;
 
