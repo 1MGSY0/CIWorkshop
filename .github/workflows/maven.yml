@@ -28,7 +28,7 @@ jobs:
       cache: maven
     - name: Run Test with Maven
       run: mvn -B test
-      12. Create or update your .github/workflows/maven.yml. Add in SonarQube workflow.
+
       sonar:
       needs: test
       runs-on: ubuntu-latest
