@@ -42,7 +42,7 @@ jobs:
         with:
           java-version: '20'
           distribution: 'temurin'
-        cache: maven
+          cache: maven
       - name: Run Test with Maven
         run: mvn -B test
 
@@ -71,6 +71,6 @@ jobs:
               restore-keys: ${{ runner.os }}-m2
           - name: Build and analyze on SonarCloud
             env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information,
-            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information,
+              SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
             run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=1MGSY0_CIWorkshop
